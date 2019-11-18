@@ -1,0 +1,4 @@
+host webapp behind nginx, should fix cross origin policy problems
+or: redirect weapp via port forwarding?
+
+webapp only works in chromium, not FF
