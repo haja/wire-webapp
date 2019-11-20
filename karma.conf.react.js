@@ -29,7 +29,7 @@ module.exports = function(config) {
     autoWatch: false,
     basePath: '',
     browserNoActivityTimeout: 20000,
-    browsers: ['ChromeNoSandbox'],
+    browsers: ['ChromiumNoSandbox'],
     client: {
       useIframe: false,
     },
@@ -42,6 +42,10 @@ module.exports = function(config) {
     customLaunchers: {
       ChromeNoSandbox: {
         base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
+      ChromiumNoSandbox: {
+        base: 'ChromiumHeadless',
         flags: ['--no-sandbox'],
       },
     },

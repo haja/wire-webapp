@@ -54,7 +54,7 @@ module.exports = function(config) {
     autoWatch: false,
     basePath: './',
     browserNoActivityTimeout: 120000,
-    browsers: ['ChromeNoSandbox'],
+    browsers: ['ChromiumNoSandbox'],
     client: {
       jasmine: {
         random: false,
@@ -82,6 +82,10 @@ module.exports = function(config) {
     customLaunchers: {
       ChromeNoSandbox: {
         base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
+      ChromiumNoSandbox: {
+        base: 'ChromiumHeadless',
         flags: ['--no-sandbox'],
       },
     },
